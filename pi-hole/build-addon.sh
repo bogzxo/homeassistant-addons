@@ -5,7 +5,7 @@ set -ueo pipefail
 DIR=${0%/*}
 cd "$DIR"
 
-VERSION=$(jq -er '.version'		< config.json)
+VERSION="2024.07.0"
 IMAGE=$(jq -er '.image'			< config.json)
 TAG=$(jq -er '"\(.image):\(.version)"'	< config.json)
 
